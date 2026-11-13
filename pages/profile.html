@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="description"
+        content="Your PasaGamit profile — manage your listings, saved items, transaction history, and settings." />
+    <title>My Profile — PasaGamit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;700&family=Permanent+Marker&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <main id="main" class="site-main container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/index.html">Home</a> / My Profile</nav>
+
+        <section class="page-banner">
+            <span class="kicker">Iyong pamana</span>
+            <h1>My Profile</h1>
+            <p>Your listings, saved items, and transaction history in one place.</p>
+        </section>
+
+        <!-- Profile header -->
+        <div class="profile-head">
+            <span class="profile-avatar" aria-hidden="true">JL</span>
+            <div>
+                <h1>Joshua Lim</h1>
+                <p class="profile-meta">BS Computer Science · 4th Year · DLSU</p>
+                <p class="profile-meta" style="margin-top:var(--space-1)">Member since 2023 · 24 items rehomed</p>
+            </div>
+            <div class="profile-actions">
+                <a class="btn btn--primary" href="/pages/post-item.html">Post an Item</a>
+                <a class="btn btn--ghost" href="/pages/marketplace.html">Browse</a>
+            </div>
+        </div>
+
+        <div class="profile-stats">
+            <div class="stat">
+                <strong>12</strong>
+                <span>listings</span>
+            </div>
+            <div class="stat">
+                <strong>8</strong>
+                <span>saved items</span>
+            </div>
+            <div class="stat">
+                <strong>₱3,850</strong>
+                <span>earned</span>
+            </div>
+            <div class="stat">
+                <strong>4.9 ★</strong>
+                <span>seller rating</span>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="profile-tabs" role="tablist" aria-label="Profile sections">
+            <button class="profile-tab" data-tab="listings" aria-selected="true" role="tab" id="tab-listings">My
+                Listings</button>
+            <button class="profile-tab" data-tab="saved" role="tab" id="tab-saved">Saved Items</button>
+            <button class="profile-tab" data-tab="history" role="tab" id="tab-history">History</button>
+            <button class="profile-tab" data-tab="settings" role="tab" id="tab-settings">Settings</button>
+        </div>
+
+        <!-- My Listings panel -->
+        <section class="profile-panel is-active" id="panel-listings" role="tabpanel" aria-labelledby="tab-listings">
+            <div class="section-head">
+                <span class="kicker">Ibinigay mo na</span>
+                <h2>My Listings</h2>
+            </div>
+            <div class="card-grid" id="my-listings"></div>
+        </section>
+
+        <!-- Saved Items panel -->
+        <section class="profile-panel" id="panel-saved" role="tabpanel" aria-labelledby="tab-saved">
+            <div class="section-head">
+                <span class="kicker">Pinadala mo sa gitna</span>
+                <h2>Saved Items</h2>
+            </div>
+            <div class="card-grid" id="saved-items"></div>
+        </section>
+
+        <!-- History panel -->
+        <section class="profile-panel" id="panel-history" role="tabpanel" aria-labelledby="tab-history">
+            <div class="section-head">
+                <span class="kicker">Nakaraang transaksyon</span>
+                <h2>Transaction History</h2>
+            </div>
+            <table class="tx-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tx-body"></tbody>
+            </table>
+        </section>
+
+        <!-- Settings panel -->
+        <section class="profile-panel" id="panel-settings" role="tabpanel" aria-labelledby="tab-settings">
+            <div class="section-head">
+                <span class="kicker">Tiyakin ang atin</span>
+                <h2>Settings</h2>
+            </div>
+            <div class="settings-row">
+                <div>
+                    <h3>Email notifications</h3>
+                    <p>Get notified when someone messages you about a listing.</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="track" aria-hidden="true"></span>
+                </label>
+            </div>
+            <div class="settings-row">
+                <div>
+                    <h3>SMS alerts</h3>
+                    <p>Receive price-drop alerts for your saved items.</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" />
+                    <span class="track" aria-hidden="true"></span>
+                </label>
+            </div>
+            <div class="settings-row">
+                <div>
+                    <h3>Public profile</h3>
+                    <p>Let other students see your listings and ratings.</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="track" aria-hidden="true"></span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Safety tips -->
+        <section class="section" aria-labelledby="safety-title">
+            <div class="corkboard">
+                <div class="corkboard__head">
+                    <span class="font-marker">Ingat sa bawat transaksyon</span>
+                    <h2 id="safety-title">Transaction Guidelines</h2>
+                </div>
+                <ul id="safety-tips"></ul>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="/js/profile.js"></script>
+</body>
+
+</html>
