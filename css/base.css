@@ -1,0 +1,66 @@
+:root {
+    --newsprint-cream: #F5EEDF;
+    --charcoal-black: #2A2A2A;
+    --sari-sari-red: #C6482A;
+    --mustard-yellow: #D8A534;
+    --forest-green: #4A6A4B;
+    --bulletin-brown: #8B5E3C;
+    --soft-gray: #E4E4E4;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--newsprint-cream);
+    margin: 0;
+    padding: 0;
+    color: var(--charcoal-black);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--sari-sari-red);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Basic styles for buttons, headers, etc. */
+.btn {
+    background-color: var(--sari-sari-red);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9c3e2a;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fraunces', serif;
+}
+
+.featured-deal {
+    background-color: var(--bulletin-brown);
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.notification {
+    background-color: var(--sari-sari-red);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
