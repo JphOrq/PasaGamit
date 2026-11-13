@@ -5,7 +5,7 @@ import { resolve } from 'path';
 const page = (p) => resolve(__dirname, p);
 
 export default defineConfig({
-    base: '/PasaGamit/',
+    base: '/',
     build: {
         rollupOptions: {
             input: {
