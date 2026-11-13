@@ -1,0 +1,14 @@
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .listing-item {
+        flex: 1 1 100%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
