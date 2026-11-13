@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - PasaGamit</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <!-- Header structure as in index.html -->
+    </header>
+
+    <main>
+        <section class="search-bar">
+            <div class="container">
+                <input type="text" id="search" placeholder="Search items...">
+                <button class="btn">Search</button>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="container">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="textbooks">Textbooks</option>
+                    <option value="uniforms">Uniforms</option>
+                    <!-- Additional categories -->
+                </select>
+
+                <label for="course">Course:</label>
+                <select id="course">
+                    <option value="all">All</option>
+                    <option value="calculus">Calculus</option>
+                    <option value="english">English</option>
+                    <!-- Additional courses -->
+                </select>
+
+                <label for="year">Year Level:</label>
+                <select id="year">
+                    <option value="all">All</option>
+                    <option value="freshman">Freshman</option>
+                    <option value="sophomore">Sophomore</option>
+                    <!-- Additional year levels -->
+                </select>
+
+                <label for="price-range">Price Range:</label>
+                <input type="range" id="price-range" min="0" max="1000" value="500">
+                <span id="price-value">500</span>
+            </div>
+        </section>
+
+        <section class="listing">
+            <!-- Listings will be fetched from localStorage or server -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer structure as in index.html -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/item.js"></script>
+</body>
+
+</html>
