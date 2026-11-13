@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="description"
+        content="The PasaGamit Student Hub — discussion boards, study groups, and community posts." />
+    <title>Student Hub — PasaGamit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;700&family=Permanent+Marker&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <main id="main" class="site-main container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/index.html">Home</a> / Student Hub</nav>
+        <section class="page-banner">
+            <span class="kicker">Tambayan ng barkada</span>
+            <h1>Student Hub</h1>
+            <p>Discussion boards, study groups, and kwentos from the community. Share tips, ask questions, find your
+                study barkada.</p>
+        </section>
+
+        <div class="hub-grid section">
+            <section aria-labelledby="boards-title">
+                <div class="section-head">
+                    <span class="kicker">Usap-usapan</span>
+                    <h2 id="boards-title">Discussion Boards</h2>
+                </div>
+                <div class="profile-tabs" id="board-tabs" role="tablist" aria-label="Board categories"></div>
+                <div class="board-list" id="thread-list"></div>
+            </section>
+
+            <section aria-labelledby="groups-title">
+                <div class="section-head">
+                    <span class="kicker">Sama-sama</span>
+                    <h2 id="groups-title">Student Groups</h2>
+                </div>
+                <div class="group-grid" id="group-grid"></div>
+            </section>
+        </div>
+
+        <section class="section" aria-labelledby="community-title">
+            <div class="corkboard">
+                <div class="corkboard__head">
+                    <span class="font-marker">Kuha mo 'to?</span>
+                    <h2 id="community-title">Community Posts</h2>
+                </div>
+                <div class="pinned-grid" id="community-posts"></div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="/js/hub.js"></script>
+</body>
+
+</html>
