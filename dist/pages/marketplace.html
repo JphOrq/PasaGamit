@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/PasaGamit/vite.svg" />
+    <meta name="description"
+        content="Browse all PasaGamit listings — search and filter textbooks, gadgets, uniforms and more." />
+    <title>Marketplace — PasaGamit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;700&family=Permanent+Marker&display=swap"
+        rel="stylesheet" />
+  <script type="module" crossorigin src="/PasaGamit/assets/marketplace-DbrbP-s0.js"></script>
+  <link rel="modulepreload" crossorigin href="/PasaGamit/assets/main-BXhKCHyo.js">
+  <link rel="stylesheet" crossorigin href="/PasaGamit/assets/main-D5AvmhrX.css">
+</head>
+
+<body>
+    <main id="main" class="site-main container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/index.html">Home</a> / Marketplace</nav>
+        <section class="page-banner">
+            <span class="kicker">Basa-basa, bili-bili</span>
+            <h1>The Marketplace</h1>
+            <p>Every pinned flyer on the board. Use the search and filters to find exactly what your subjects (and your
+                budget) need.</p>
+        </section>
+
+        <form class="search-bar" id="search-form" role="search">
+            <label for="search-input" class="visually-hidden" style="position:absolute;left:-999px">Search
+                listings</label>
+            <input type="search" id="search-input" placeholder="Search calculators, uniforms, reviewers..." />
+            <button class="btn btn--primary" type="submit">Search</button>
+        </form>
+        
+        <div class="market-layout">
+            <aside class="filters" aria-label="Listing filters">
+                <h2>Filter the board</h2>
+                <div class="field">
+                    <label for="filter-category">Category</label>
+                    <select id="filter-category">
+                        <option value="">All categories</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="filter-course">Course</label>
+                    <select id="filter-course">
+                        <option value="">All courses</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="filter-year">Year level</label>
+                    <select id="filter-year">
+                        <option value="">All year levels</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="filter-condition">Condition</label>
+                    <select id="filter-condition">
+                        <option value="">Any condition</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="filter-price">Max price</label>
+                    <input type="range" id="filter-price" min="0" max="10000" step="50" />
+                    <span id="price-label" class="hint">Any price</span>
+                </div>
+                <button class="btn btn--ghost btn--sm" id="clear-filters" type="button">Clear all filters</button>
+                </aside>
+
+            <section aria-label="Listing results">
+                <p class="result-count font-marker" id="result-count" aria-live="polite"></p>
+                <div class="card-grid" id="market-grid"></div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

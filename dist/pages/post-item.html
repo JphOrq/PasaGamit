@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/PasaGamit/vite.svg" />
+    <meta name="description" content="Post an item on PasaGamit — sell or trade your pre-loved school things." />
+    <title>Post an Item — PasaGamit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;700&family=Permanent+Marker&display=swap"
+        rel="stylesheet" />
+  <script type="module" crossorigin src="/PasaGamit/assets/postItem-CJY5kH8L.js"></script>
+  <link rel="modulepreload" crossorigin href="/PasaGamit/assets/main-BXhKCHyo.js">
+  <link rel="stylesheet" crossorigin href="/PasaGamit/assets/main-D5AvmhrX.css">
+</head>
+
+<body>
+    <main id="main" class="site-main container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/index.html">Home</a> / Post an Item</nav>
+        <section class="page-banner">
+            <span class="kicker">I-paskil na yan!</span>
+            <h1>Post an Item</h1>
+            <p>Fill out the flyer below. Your listing goes straight to the marketplace board — free for verified
+                students.</p>
+        </section>
+
+        <div class="form-success" id="form-success" role="status">
+            <strong>Na-post na!</strong>
+            <p>Your item is now pinned on the marketplace board. Check how it looks and share it with your blockmates.
+            </p>
+            <a class="btn btn--sm btn--success" id="success-link" href="/pages/marketplace.html">View it on the
+                Marketplace →</a>
+        </div>
+
+        <form class="form-card" id="post-form" novalidate>
+            <div class="form-grid">
+                <div class="field field--full">
+                    <label for="f-title">Item title</label>
+                    <input type="text" id="f-title" placeholder="e.g. Casio fx-991ES PLUS Scientific Calculator"
+                        required />
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+                <div class="field field--full">
+                    <label for="f-desc">Description</label>
+                    <textarea id="f-desc"
+                        placeholder="What is it? How old? Any quirks a buyer should know? Where can you meet up?"
+                        required></textarea>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label for="f-price">Price (₱) — leave 0 for FREE</label>
+                    <input type="number" id="f-price" min="0" step="10" placeholder="350" />
+                    <span class="hint">Free items get a green FREE tag on the board.</span>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label for="f-trade">Trade preference</label>
+                    <select id="f-trade">
+                        <option>Cash only</option>
+                        <option>Open to trade</option>
+                        <option>Trade only</option>
+                        <option>Free / Donate</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="f-category">Category</label>
+                    <select id="f-category" required></select>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label for="f-condition">Condition</label>
+                    <select id="f-condition" required></select>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label for="f-course">Your course</label>
+                    <select id="f-course" required></select>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label for="f-year">Year level</label>
+                    <select id="f-year" required></select>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+                <div class="field field--full">
+                    <label for="f-photos">Photos (up to 4)</label>
+                    <div class="upload-zone" id="upload-zone">
+                        <input type="file" id="f-photos" accept="image/*" multiple />
+                        <p class="font-marker">Drag photos here, or click to browse</p>
+                        <p class="hint">No photo? A bulletin-board placeholder will be used instead.</p>
+                    </div>
+                    <div class="upload-preview" id="photo-preview" aria-live="polite"></div>
+                </div>
+                <fieldset class="field field--full">
+                    <legend>Deal type</legend>
+                    <div class="radio-pills">
+                        <label class="radio-pill"><input type="radio" name="deal-type" value="sell"
+                                checked /><span>Sell</span></label>
+                        <label class="radio-pill"><input type="radio" name="deal-type"
+                                value="trade" /><span>Trade</span></label>
+                        <label class="radio-pill"><input type="radio" name="deal-type" value="giveaway" /><span>Give
+                                away</span></label>
+                    </div>
+                </fieldset>
+                <div class="field--full" style="display:flex;gap:12px;flex-wrap:wrap">
+                    <button class="btn btn--primary" type="submit">Post it on the Board</button>
+                    <a class="btn btn--ghost" href="/pages/marketplace.html">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
